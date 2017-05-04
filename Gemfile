@@ -21,6 +21,7 @@ source 'https://rubygems.org'
  gem 'foundation'
  gem 'figaro'
  gem 'bcrypt'
+ gem 'devise'
 
  group :development, :test do
    gem 'byebug'
