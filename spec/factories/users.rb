@@ -1,7 +1,7 @@
 FactoryGirl.define do
   pw = Faker::Lorem.characters(10)
   factory :user do
-    name Faker::Name.name
+    username Faker::Name.name
     sequence(:email){|n| "user#{n}@blocstoneapi.com" }
     password pw
     password_confirmation pw
