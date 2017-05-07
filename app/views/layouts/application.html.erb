@@ -1,14 +1,50 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>BlocstoneApi</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<%= yield %>
+    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
 
-</body>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => false %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => false %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <div class="top-bar">
+      <div class="top-bar-title">
+        <span class="hidden-for-medium-up" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+          <button class="menu-icon dark hidden-for-medium-up" type="button" data-toggle></button>
+        </span>
+        <strong><%= link_to 'Blocstone API', root_path %></strong>
+      </div>
+      <div id="responsive-menu">
+        <% if user_signed_in? %>
+        <div class="top-bar-left">
+          <ul class="dropdown menu vertical medium-horizontal">
+          </ul>
+        </div>
+        <% end %>
+        <div class="top-bar-right">
+          <ul class="dropdown menu vertical medium-horizontal" data-dropdown-menu>
+            <% if user_signed_in? %>
+              <li><strong><%= current_user.username %></strong></li>
+              <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
+              <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+            <% else %>
+              <li><%= link_to "Sign Up", new_user_registration_path %></li>
+              <li><%= link_to "Sign In", new_user_session_path %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <%= yield %>
+
+  <script>
+    $(document).foundation();
+  </script>
+  </body>
 </html>

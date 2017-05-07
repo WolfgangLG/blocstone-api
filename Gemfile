@@ -18,9 +18,10 @@ source 'https://rubygems.org'
  gem 'coffee-rails', '~> 4.1.0'
  gem 'jquery-rails'
  gem 'turbolinks'
- gem 'foundation'
+ gem 'foundation-rails'
  gem 'figaro'
  gem 'bcrypt'
+ gem 'devise'
 
  group :development, :test do
    gem 'byebug'
