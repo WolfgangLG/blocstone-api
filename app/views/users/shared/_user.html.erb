@@ -4,6 +4,16 @@
   </div>
 </div>
 
+<div class="row small-up-4 medium-up-3 large-up-4">
+  <div class="small-offset-2 columns column-block">
+    <%= image_tag current_user.avatar_url(160), class: "gravatar" %>
+  </div>
+  <div class="columns column-block">
+    <!-- <p>User Name: <%= @user.username %></p>
+    <p>User Email: <%= @user.email %></p> -->
+  </div>
+</div>
+
 <%= form_for(@user, url: registration_path(@user), html: { method: :put }) do |f| %>
 <div class="row">
   <div class="small-8 small-offset-2 columns">
