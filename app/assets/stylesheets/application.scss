@@ -17,3 +17,14 @@
  *= require foundation_and_overrides
 
  */
+
+.blocsite-nav {
+  background: $dark-gray;
+  a {
+    color: $white;
+  }
+}
+
+.test-outline {
+  border: 1px solid black;
+}
