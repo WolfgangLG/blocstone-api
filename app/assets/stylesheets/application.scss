@@ -29,10 +29,13 @@
 }
 
 .blocstone-footer {
-  min-height: 5rem;
+  min-height: 4rem;
 }
 
 .footer-text {
-  position:relative;
-  top: 2rem;
+  margin-top: 15px;
+}
+
+.test-outline {
+  border: 1px solid black;
 }
