@@ -12,12 +12,17 @@
     <div class="user-info-card small-12 medium-6 columns float-right end">
       <p><strong>Name:</strong> <%= @user.username %></p>
       <p><strong>Email:</strong> <%= @user.email %></p>
+      <%- if @user.g2_crowd_api_token.present? %>
+        <p><strong>G2 Crowd API Token:</strong> <%= @user.g2_crowd_api_token %></p>
+      <% end %>
+      <%- if @user.mattermark_api_token.present? %>
+        <p><strong>Mattermark API Token:</strong> <%= @user.mattermark_api_token %></p>
+      <% end %>
+      <%- if @user.glassdoor_api_token.present? %>
+        <p><strong>Glassdoor API Token:</strong> <%= @user.glassdoor_api_token %></p>
+      <% end %>
     </div>
   </div>
-</div>
-
-<div class="token-section section">
-  <%= render 'profiles/tokens' %>
 </div>
 
 <div class="user-section section">
