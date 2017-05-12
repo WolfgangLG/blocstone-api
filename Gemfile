@@ -22,6 +22,7 @@ source 'https://rubygems.org'
  gem 'figaro'
  gem 'bcrypt'
  gem 'devise'
+ gem 'font-awesome-sass'
 
  group :development, :test do
    gem 'byebug'
