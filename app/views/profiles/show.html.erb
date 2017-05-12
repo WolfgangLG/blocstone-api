@@ -4,15 +4,18 @@
   </div>
 </div>
 
-<div class="row small-up-4 medium-up-3 large-up-4">
-  <div class="small-offset-2 columns column-block">
-    <%= image_tag current_user.avatar_url(160), class: "gravatar" %>
-  </div>
-  <div class="columns column-block">
-    <!-- <p>User Name: <%= @user.username %></p>
-    <p>User Email: <%= @user.email %></p> -->
+<div class="row">
+  <div class="user-card small-8 small-offset-2 columns">
+    <div class="gravatar-container small-12 medium-4 columns">
+      <%= image_tag current_user.avatar_url(160), class: "gravatar" %>
+    </div>
+    <div class="user-info-card small-12 medium-6 columns float-right end">
+      <p><strong>Name:</strong> <%= @user.username %></p>
+      <p><strong>Email:</strong> <%= @user.email %></p>
+    </div>
   </div>
 </div>
 
-
-<%= render 'users/shared/user' %>
+<div class="user-section section">
+  <%= render 'users/shared/user' %>
+</div>

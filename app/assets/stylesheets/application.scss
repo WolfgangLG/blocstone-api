@@ -19,8 +19,12 @@
 
  */
 
+ .blocstone-nav {
+   position: relative;
+   margin-bottom: 2rem;
+ }
+
 .blocstone-nav, .blocstone-footer {
-  position: relative;
   background: $dark-gray;
   max-width:none;
   a, p {
@@ -40,6 +44,8 @@
   margin-top: 15px;
 }
 
-.test-outline {
-  border: 1px solid black;
+.user-info-card {
+  border: 1px solid $medium-gray;
+  box-shadow: $thumbnail-text-shadow;
+  margin-bottom: 2rem;
 }
