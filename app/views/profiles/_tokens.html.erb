@@ -1,0 +1,28 @@
+<%= form_for(@user, url: registration_path(@user), html: { method: :put }) do |f| %>
+<div class="row">
+  <div class="small-8 small-offset-2 columns">
+    <div class="field">
+      <%= f.label :g2_crowd_api_token, "G2 Crowd API Token" %>
+      <%= f.text_field :g2_crowd_api_token, autofocus: false %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-8 small-offset-2 columns">
+    <div class="field">
+      <%= f.label :mattermark_api_token, "Mattermark API Token" %>
+      <%= f.text_field :mattermark_api_token, autofocus: false %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-8 small-offset-2 columns">
+    <div class="field">
+      <%= f.label :glassdoor_api_token, "Glassdooe API Token" %>
+      <%= f.text_field :glassdoor_api_token, autofocus: false %>
+    </div>
+  </div>
+</div>
+<% end %>
