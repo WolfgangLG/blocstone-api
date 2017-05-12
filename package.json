@@ -1,0 +1,22 @@
+{
+  "name": "blocstone-api",
+  "version": "1.0.0",
+  "description": "== README",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WolfgangLG/blocstone-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WolfgangLG/blocstone-api/issues"
+  },
+  "homepage": "https://github.com/WolfgangLG/blocstone-api#readme"
+}

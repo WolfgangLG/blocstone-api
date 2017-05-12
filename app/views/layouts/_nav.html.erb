@@ -1,0 +1,27 @@
+<div class="top-bar blocstone-nav">
+  <div class="top-bar-title">
+    <span class="hidden-for-medium-up" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+      <button class="menu-icon hidden-for-medium-up" type="button" data-toggle></button>
+    </span>
+    <strong><%= link_to 'Blocstone API', root_path %></strong>
+  </div>
+  <div id="responsive-menu">
+    <% if user_signed_in? %>
+    <div class="top-bar-left">
+      <ul class="dropdown menu vertical medium-horizontal">
+      </ul>
+    </div>
+    <% end %>
+    <div class="top-bar-right">
+      <ul class="dropdown menu vertical medium-horizontal" data-dropdown-menu>
+        <% if user_signed_in? %>
+          <li><strong><%= link_to current_user.username, profile_path %></strong></li>
+          <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to "Sign Up", new_user_registration_path %></li>
+          <li><%= link_to "Sign In", new_user_session_path %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,6 @@
 @import "foundation_and_overrides";
+@import "users.scss";
+@import "welcome.scss";
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -16,3 +18,24 @@
  *= require foundation_and_overrides
 
  */
+
+.blocstone-nav, .blocstone-footer {
+  position: relative;
+  background: $dark-gray;
+  max-width:none;
+  a, p {
+    color: $white;
+  }
+}
+
+.blocstone-footer {
+  min-height: 4rem;
+}
+
+.footer-text {
+  margin-top: 15px;
+}
+
+.test-outline {
+  border: 1px solid black;
+}
