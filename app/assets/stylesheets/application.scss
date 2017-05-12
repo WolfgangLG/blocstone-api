@@ -29,7 +29,11 @@
 }
 
 .blocstone-footer {
+  height: 50px;
   min-height: 4rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer-text {
