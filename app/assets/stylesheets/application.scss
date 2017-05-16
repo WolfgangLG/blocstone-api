@@ -1,6 +1,9 @@
 @import "foundation_and_overrides";
 @import "users.scss";
 @import "welcome.scss";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -19,8 +22,12 @@
 
  */
 
+ .blocstone-nav {
+   position: relative;
+   margin-bottom: 2rem;
+ }
+
 .blocstone-nav, .blocstone-footer {
-  position: relative;
   background: $dark-gray;
   max-width:none;
   a, p {
@@ -29,13 +36,19 @@
 }
 
 .blocstone-footer {
+  height: 50px;
   min-height: 4rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer-text {
   margin-top: 15px;
 }
 
-.test-outline {
-  border: 1px solid black;
+.user-info-card {
+  padding: 5px;
+  border: 1px solid #e5e5e5;
+  margin-bottom: 2rem;
 }

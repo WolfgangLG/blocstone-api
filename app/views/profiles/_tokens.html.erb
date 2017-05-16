@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="small-8 small-offset-2 columns">
+    <fieldset class="fieldset">
+      <legend>Your API Tokens</legend>
+      <div class="field">
+        <%= f.label :g2_crowd_api_token, "G2 Crowd API Token" %>
+        <%= f.text_field :g2_crowd_api_token, autofocus: true %>
+      </div>
+      <div class="field">
+        <%= f.label :mattermark_api_token, "Mattermark API Token" %>
+        <%= f.text_field :mattermark_api_token, autofocus: false %>
+      </div>
+      <div class="field">
+        <%= f.label :glassdoor_api_token, "Glassdoor API Token" %>
+        <%= f.text_field :glassdoor_api_token, autofocus: false %>
+      </div>
+    </fieldset>
+  </div>
+</div>

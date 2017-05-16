@@ -15,11 +15,15 @@ $hero-height: 30rem;
   justify-content: center;
   max-width: none;
   margin-bottom: 20px;
+  margin-top: -2rem;
 
   .hero-section-text {
     color: $dark-gray;
-    text-shadow: 1px 1px 2px $black;
     border: 1px solid $dark-gray;
     padding: 2rem 3rem;
+    background: rgba(255,255,255,1);
   }
+}
+.welcome-section {
+  margin-bottom: 50px;
 }
