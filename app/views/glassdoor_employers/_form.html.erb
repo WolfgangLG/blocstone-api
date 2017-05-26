@@ -1,0 +1,17 @@
+<%= form_for(@glassdoor_employer) do |f| %>
+  <% if @glassdoor_employer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@glassdoor_employer.errors.count, "error") %> prohibited this glassdoor_employer from being saved:</h2>
+
+      <ul>
+      <% @glassdoor_employer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

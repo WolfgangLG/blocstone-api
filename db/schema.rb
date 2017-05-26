@@ -11,7 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170522113422) do
+ActiveRecord::Schema.define(version: 20170526005251) do
+
+  create_table "glassdoor_employers", force: :cascade do |t|
+    t.string   "name",                                                      null: false
+    t.integer  "employer_id",                                               null: false
+    t.string   "website",                        default: "",               null: false
+    t.string   "industry",                       default: "",               null: false
+    t.string   "squareLogo",                     default: "",               null: false
+    t.integer  "numberOfRatings",                default: 0,                null: false
+    t.integer  "overallRating",                  default: 0,                null: false
+    t.string   "ratingDescription",              default: "Not Applicable", null: false
+    t.string   "cultureAndValuesRating",         default: "Not Applicable", null: false
+    t.string   "seniorLeadershipRating",         default: "Not Applicable", null: false
+    t.string   "compensationsAndBenefitsRating", default: "Not Applicable", null: false
+    t.string   "careerOpportunitiesRating",      default: "Not Applicable", null: false
+    t.string   "workLifeBalanceRating",          default: "Not Applicable", null: false
+    t.datetime "created_at",                                                null: false
+    t.datetime "updated_at",                                                null: false
+  end
 
   create_table "organizations", force: :cascade do |t|
     t.string   "name",       default: "", null: false
