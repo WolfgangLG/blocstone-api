@@ -2,7 +2,9 @@ User.create!(
   username:       "Ludwig Gerdes",
   email:          "gerdesludwig@gmail.com",
   password:       "password",
-  confirmed_at:   Date.today
+  confirmed_at:   Date.today,
+  glassdoor_partner_id: ENV["glassdoor_partner_id"],
+  glassdoor_key: ENV["glassdoor_key"]
 )
 
 5.times do

@@ -11,7 +11,7 @@ class CreateGlassdoorEmployers < ActiveRecord::Migration
       t.string  :ratingDescription,              null: false, default: 'Not Applicable'
       t.string  :cultureAndValuesRating,         null: false, default: 'Not Applicable'
       t.string  :seniorLeadershipRating,         null: false, default: 'Not Applicable'
-      t.string  :compensationsAndBenefitsRating, null: false, default: 'Not Applicable'
+      t.string  :compensationAndBenefitsRating,  null: false, default: 'Not Applicable'
       t.string  :careerOpportunitiesRating,      null: false, default: 'Not Applicable'
       t.string  :workLifeBalanceRating,          null: false, default: 'Not Applicable'
 
