@@ -1,17 +1,9 @@
-<%= form_for(@glassdoor_employer) do |f| %>
-  <% if @glassdoor_employer.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@glassdoor_employer.errors.count, "error") %> prohibited this glassdoor_employer from being saved:</h2>
-
-      <ul>
-      <% @glassdoor_employer.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<%= form_tag(search_path, method: :get, id: "search-form") do %>
+    <div class="form-group">
+      <%= label_tag(:name, "Find Company Name") %>
+      <%= text_field_tag(:name, params[:name], class: 'form-control', autofocus: true, placeholder: "Company Name") %>
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="form-group">
+      <%= submit_tag("Search", class: 'btn btn-success') %>
+    </div>
 <% end %>
