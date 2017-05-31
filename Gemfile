@@ -23,6 +23,7 @@ source 'https://rubygems.org'
  gem 'bcrypt'
  gem 'devise'
  gem 'font-awesome-sass'
+ gem 'httparty'
 
  group :development, :test do
    gem 'byebug'

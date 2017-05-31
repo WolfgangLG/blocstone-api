@@ -11,7 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170512070508) do
+ActiveRecord::Schema.define(version: 20170526005251) do
+
+  create_table "glassdoor_employers", force: :cascade do |t|
+    t.string   "name",                                                     null: false
+    t.integer  "employer_id",                                              null: false
+    t.string   "website",                       default: "",               null: false
+    t.string   "industry",                      default: "",               null: false
+    t.string   "squareLogo",                    default: "",               null: false
+    t.integer  "numberOfRatings",               default: 0,                null: false
+    t.integer  "overallRating",                 default: 0,                null: false
+    t.string   "ratingDescription",             default: "Not Applicable", null: false
+    t.string   "cultureAndValuesRating",        default: "Not Applicable", null: false
+    t.string   "seniorLeadershipRating",        default: "Not Applicable", null: false
+    t.string   "compensationAndBenefitsRating", default: "Not Applicable", null: false
+    t.string   "careerOpportunitiesRating",     default: "Not Applicable", null: false
+    t.string   "workLifeBalanceRating",         default: "Not Applicable", null: false
+    t.datetime "created_at",                                               null: false
+    t.datetime "updated_at",                                               null: false
+  end
+
+  create_table "organizations", force: :cascade do |t|
+    t.string   "name",       default: "", null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "username",               default: "", null: false
@@ -33,7 +57,8 @@ ActiveRecord::Schema.define(version: 20170512070508) do
     t.datetime "updated_at",                          null: false
     t.string   "g2_crowd_api_token"
     t.string   "mattermark_api_token"
-    t.string   "glassdoor_api_token"
+    t.string   "glassdoor_partner_id"
+    t.string   "glassdoor_key"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true

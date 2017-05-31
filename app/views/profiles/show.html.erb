@@ -18,8 +18,11 @@
       <%- if @user.mattermark_api_token.present? %>
         <p><strong>Mattermark API Token:</strong> <%= @user.mattermark_api_token %></p>
       <% end %>
-      <%- if @user.glassdoor_api_token.present? %>
-        <p><strong>Glassdoor API Token:</strong> <%= @user.glassdoor_api_token %></p>
+      <%- if @user.glassdoor_key.present? %>
+        <p><strong>Glassdoor Key:</strong> <%= @user.glassdoor_key %></p>
+      <% end %>
+      <%- if @user.glassdoor_partner_id.present? %>
+          <p><strong>Glassdoor Partner ID:</strong> <%= @user.glassdoor_partner_id %></p>
       <% end %>
     </div>
   </div>
