@@ -17,5 +17,25 @@ User.create!(
 end
 users = User.all
 
+5.times do
+  nm = Faker::App.name
+  GlassdoorEmployer.create!(
+    name:                          nm,
+    employer_id:                   Random.rand(1000),
+    website:                       "www.#{nm.gsub(" ","").downcase}.com",
+    industry:                      Faker::Job.field,
+    squareLogo:                    Faker::Company.logo,
+    numberOfRatings:               Random.rand(1..100),
+    overallRating:                 Random.rand(4.0),
+    ratingDescription:             Faker::Lorem.word,
+    cultureAndValuesRating:        Random.rand(4.0),
+    seniorLeadershipRating:        Random.rand(4.0),
+    compensationAndBenefitsRating: Random.rand(4.0),
+    careerOpportunitiesRating:     Random.rand(4.0),
+    workLifeBalanceRating:         Random.rand(4.0)
+  )
+end
+
 puts "Seed finished"
 puts "#{User.count} users created"
+puts "#{GlassdoorEmployer.count} employers created"
