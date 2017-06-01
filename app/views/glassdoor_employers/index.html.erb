@@ -1,5 +1,17 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Glassdoor Employers</h1>
-
-<br>
+<div class="row">
+  <div class="small-12 columns">
+    <h1>Listing Registered Applications</h1>
+  </div>
+</div>
+<div class="row">
+  <% @glassdoor_employers.each do |employer| %>
+    <div class="small-6 medium-8 columns">
+      <%= employer.name %>
+    </div>
+    <div class="small-6 medium-4 columns">
+      <div class="small button-group">
+        <%= link_to 'Destroy', employer, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'alert button' %>
+      </div>
+    </div>
+  <% end %>
+</div>
