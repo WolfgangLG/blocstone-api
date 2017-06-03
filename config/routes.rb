@@ -4,6 +4,6 @@ Rails.application.routes.draw do
 
   resources :organizations, only: [:index, :show]
   resources :glassdoor_employers, only: [:index, :show, :update, :destroy]
-  get 'search', to: 'glassdoor_employers#show', as: :search
+  get 'search', to: 'glassdoor_employers#search', as: :search
   root 'welcome#index'
 end

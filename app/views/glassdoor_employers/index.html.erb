@@ -6,7 +6,7 @@
 <div class="row">
   <% @glassdoor_employers.each do |employer| %>
     <div class="small-6 medium-8 columns">
-      <%= employer.name %>
+      <%= link_to employer.name, employer %>
     </div>
     <div class="small-6 medium-4 columns">
       <div class="small button-group">
