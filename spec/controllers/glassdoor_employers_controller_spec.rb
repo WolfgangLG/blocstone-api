@@ -93,6 +93,30 @@ RSpec.describe GlassdoorEmployersController, type: :controller do
         sign_in my_user
       end
 
+      it "returns http success" do
+        glassdoor_employer = GlassdoorEmployer.create(new_glassdoor_employer_attributes )
+        get :show, id: glassdoor_employer.id
+        expect(response).to have_http_status(:success)
+      end
+
+      it "renders the #show view" do
+        glassdoor_employer = GlassdoorEmployer.create(new_glassdoor_employer_attributes )
+        get :show, id: glassdoor_employer.id
+        expect(response).to render_template :show
+      end
+
+      it "assigns glassdoor_employer to @glassdoor_employer" do
+        glassdoor_employer = GlassdoorEmployer.create(new_glassdoor_employer_attributes )
+        get :show, id: glassdoor_employer.id
+        expect(assigns(:glassdoor_employer)).to eq(glassdoor_employer)
+      end
+    end
+
+    describe "GET #search" do
+      before(:each) do
+        sign_in my_user
+      end
+
       it "returns a glassdoor employer" do
         employer = double
         allow(employer).to receive(:find_employer).with("ACME").and_return(new_glassdoor_employer_attributes)

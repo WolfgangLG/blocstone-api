@@ -12,6 +12,11 @@ class GlassdoorEmployersController < ApplicationController
 
   # # GET /glassdoor_employers/1
   def show
+    @glassdoor_employer = GlassdoorEmployer.find(params[:id])
+  end
+
+  # # GET /search
+  def search
     gd_api = GlassdoorService.new(current_user)
     @glassdoor_employer = gd_api.find_employer(params[:name])
   end
